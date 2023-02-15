@@ -10,3 +10,7 @@ To run the example:
 1. Run `node index.js`
 
 > You can see how to install and run a Kafka cluster in my [other tutorial](https://www.sohamkamani.com/blog/2017/11/22/how-to-install-and-run-kafka/)
+
+Nodejs performance testing tips:
+https://stackify.com/node-js-performance-tuning/
+
