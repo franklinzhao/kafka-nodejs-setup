@@ -6,9 +6,9 @@ const topic = "my-kafka-topic-1"
 
 const kafka = new Kafka({
 	clientId,
-	brokers,
+	brokers
 	// logCreator: customLogger,
-	logLevel: logLevel.DEBUG,
+	// logLevel: logLevel.DEBUG,
 })
 
 // the kafka instance and configuration variables are the same as before
@@ -32,9 +32,9 @@ const consume = async () => {
 		// this function is called every time the consumer gets a new message
 		eachMessage: ({ message }) => {
 			// here, we just log the message to the standard output
-			console.log(`$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$Kafka received message # : ${message.value}`)
+			console.log(`$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Kafka received message # : ${message.value}`)
 		},
 	})
 }
 
-module.exports = consume
+module.exports = {consume:consume}

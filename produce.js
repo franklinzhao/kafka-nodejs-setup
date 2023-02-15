@@ -10,7 +10,8 @@ const brokers = ["localhost:9091", "localhost:9092", "localhost:9093"]
 const topic = "my-kafka-topic-1"
 
 // initialize a new kafka client and initialize a producer from it
-const kafka = new Kafka({ clientId, brokers, logLevel: logLevel.DEBUG })
+// const kafka = new Kafka({ clientId, brokers, logLevel: logLevel.DEBUG })
+const kafka = new Kafka({ clientId, brokers })
 const producer = kafka.producer({})
 
 // producer.createTopics(
@@ -53,12 +54,12 @@ const produce = async () => {
 			})
 
 			// if the message is written successfully, log it and increment `i`
-			console.log("####################Kafka writes message # : ", i)
+			console.log("#################### Kafka writes message # : ", i)
 			i++
 		} catch (err) {
 			console.error("could not write message " + err)
 		}
-	}, 1000)
+	}, 1)
 }
 
-module.exports = produce
+module.exports = {produce:produce}
