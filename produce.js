@@ -21,7 +21,7 @@ const producer = kafka.producer({})
 // 	function (err, data) {}
 //   );
 
-let book = {
+let book = JSON.stringify({
 	"bid":"001",
 	"bookInfo": {
 		title: 'Moby Dick',
@@ -30,7 +30,7 @@ let book = {
 			born: 1819
 		}
 	}
-}
+});
 // we define an async function that writes a new message each second
 const produce = async () => {
 	await producer.connect()
@@ -47,7 +47,7 @@ const produce = async () => {
 				messages: [
 					{
 						key: String(i),
-						value: "this is message of book "+JSON.stringify(book) +",  MessageID: " + i,
+						value: "this is message of book obj:  "+ book +",  MessageID: " + i,
 					},
 				],
 			})
