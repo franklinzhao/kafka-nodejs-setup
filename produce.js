@@ -4,7 +4,7 @@ const { Kafka, logLevel } = require("kafkajs")
 // the client ID lets kafka know who's producing the messages
 const clientId = "my-app"
 // we can define the list of brokers in the cluster
-const brokers = ["localhost:9091", "localhost:9092", "localhost:9093"]
+const brokers = ["localhost:9097", "localhost:9098", "localhost:9099"]
 
 // this is the topic to which we want to write messages
 const topic = "my-kafka-topic-1"

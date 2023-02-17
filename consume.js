@@ -1,7 +1,7 @@
 const { Kafka, logLevel } = require("kafkajs")
 
 const clientId = "my-app"
-const brokers = ["localhost:9091","localhost:9092","localhost:9093"]
+const brokers = ["localhost:9097", "localhost:9098", "localhost:9099"]
 const topic = "my-kafka-topic-1"
 
 const kafka = new Kafka({
